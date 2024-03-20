@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row gap-5 justify-content-center ">
                 <h1>Disc List</h1>
-                <div class="card col-6 col-md-3 text-center " v-for="album in albums" @click="showInfo()">
+                <div class="card col-6 col-md-3 text-center " v-for="(album,index) in albums" @click="showInfo(index) ">
                     <img :src="album.poster" alt="">
                     <p>{{album.title}}</p>
                     <p>{{album.author}}</p>

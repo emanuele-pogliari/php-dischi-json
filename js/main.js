@@ -8,9 +8,10 @@ createApp({
   },
 
   methods: {
-    showInfo(index) {
+    showInfo(discIndex) {
       axios.get("./server.php?").then((res) => {
-        console.log(res.data[3]);
+        console.log(discIndex);
+        console.log(res.data[discIndex]);
       });
     },
   },

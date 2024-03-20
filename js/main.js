@@ -4,15 +4,17 @@ createApp({
   data() {
     return {
       albums: [],
+      showOverlayInfo: false,
+      singleAlbum: [],
     };
   },
 
   methods: {
     showInfo(discIndex) {
       axios.get("./server.php?").then((res) => {
-        console.log(discIndex);
-        console.log(res.data[discIndex]);
+        this.singleAlbum = res.data[discIndex];
       });
+      this.showOverlayInfo = !this.showOverlayInfo;
     },
   },
 

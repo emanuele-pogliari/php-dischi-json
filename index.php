@@ -23,17 +23,29 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="row gap-5 justify-content-center ">
+            <div class="row gap-5 justify-content-center position-relative">
                 <h1>Disc List</h1>
+
                 <div class="card col-6 col-md-3 text-center " v-for="(album,index) in albums" @click="showInfo(index) ">
                     <img :src="album.poster" alt="">
                     <p>{{album.title}}</p>
                     <p>{{album.author}}</p>
                 </div>
+
+                <div v-if="showOverlayInfo" class="position-absolute desc-overlay">
+                    <div class="card">
+                        <img :src="singleAlbum.poster" alt="">
+                        <h5 class="">{{singleAlbum.title}}</h5>
+                        <p class="">{{singleAlbum.author}}</p>
+                        <p class="">{{singleAlbum.year}}</p>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
     </div>
-
     <script src="./js/main.js"></script>
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

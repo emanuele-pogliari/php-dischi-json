@@ -21,8 +21,12 @@
 <body>
     <div id="app">
         <h1>Disc List</h1>
-        <ul>
-            <li></li>
+        <ul v-for="album in albums">
+            <li>
+                <img :src="album.poster" alt="">
+                <p>{{album.title}}</p>
+                <p>{{album.author}}</p>
+            </li>
         </ul>
     </div>
 

@@ -10,6 +10,8 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
     <!-- vue 3 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -20,14 +22,16 @@
 
 <body>
     <div id="app">
-        <h1>Disc List</h1>
-        <ul v-for="album in albums">
-            <li>
-                <img :src="album.poster" alt="">
-                <p>{{album.title}}</p>
-                <p>{{album.author}}</p>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row gap-5 justify-content-center ">
+                <h1>Disc List</h1>
+                <div class="card col-6 col-md-3 text-center " v-for="album in albums">
+                    <img :src="album.poster" alt="">
+                    <p>{{album.title}}</p>
+                    <p>{{album.author}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>

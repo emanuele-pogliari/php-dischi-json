@@ -13,8 +13,13 @@ createApp({
     showInfo(discIndex) {
       axios.get("./server.php?").then((res) => {
         this.singleAlbum = res.data[discIndex];
+        console.log(this.singleAlbum);
       });
-      this.showOverlayInfo = !this.showOverlayInfo;
+      this.showOverlayInfo = true;
+    },
+
+    hideInfo() {
+      this.showOverlayInfo = false;
     },
   },
 

@@ -1,16 +1,69 @@
 body {
-  background-color: rgb(44, 34, 34);
+  background: #373b44;
+  background: -webkit-linear-gradient(to bottom, #4286f4, #373b44);
+  background: linear-gradient(to bottom, #4286f4, #373b44);
+
   color: white;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial;
+}
+section {
+  padding: 50px;
+}
+
+.title {
+  height: 100px;
+}
+
+.title h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.my-home-card {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.1s ease-in;
+  cursor: pointer;
 }
 
 .desc-overlay {
   top: 0;
   left: 0%;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 3;
+}
+
+.desc-overlay .card-album {
+  width: 70%;
+  height: 60%;
+  color: white;
+  background-color: rgb(27, 32, 49);
+  gap: 120px;
+}
+
+.desc-overlay .card-album i {
+  cursor: pointer;
+}
+
+.img-box img {
+  width: 300px;
+}
+
+/* hover effects */
+
+.my-home-card:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.401) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }

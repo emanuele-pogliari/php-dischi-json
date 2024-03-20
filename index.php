@@ -19,7 +19,12 @@
 
 
 <body>
-
+    <div id="app">
+        <h1>Disc List</h1>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
 
     <script src="./js/main.js"></script>
     <!-- bootstrap -->

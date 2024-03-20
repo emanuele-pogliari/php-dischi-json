@@ -7,5 +7,9 @@ createApp({
 
   methods: {},
 
-  mounted() {},
+  mounted() {
+    axios.get("./server.php").then((res) => {
+      console.log(res.data);
+    });
+  },
 }).mount("#app");
